@@ -13,7 +13,7 @@ interface User {
 // extends 
 interface Admin extends User{
     fathersname : string
-}
+}  
 const fun = (obj:Admin) =>{
     obj.name,
     obj.gender,
@@ -29,7 +29,19 @@ fun({
     gender :'male',
     fathersname: 'Abc'
 });
+// intersection 
+type user  = {
+    username : string,
+    Email: string
+};
 
+type admin = user & {
+    getdetails(id:string):void
+} ;
 
+const funct= (m:admin)=>{
+    m.getdetails
+}
+// constructer 
 
 
